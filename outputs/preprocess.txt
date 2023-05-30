@@ -1,0 +1,48 @@
+==================== gamblers_different.csv ====================
+number of subjects before preprocessing: 396
+number of subjects after removing attention check fails: 366
+number of subjects after removing submissions with missing data: 299
+number of subjects after removing submissions that exceed duration thresholds: 293
+number of subjects after removing submissions that did not choose within the circle: 292
+Average duration: 698.6757679180887
+
+==================== gamblers_same.csv ====================
+number of subjects before preprocessing: 398
+number of subjects after removing attention check fails: 356
+number of subjects after removing submissions with missing data: 276
+number of subjects after removing submissions that exceed duration thresholds: 271
+number of subjects after removing submissions that did not choose within the circle: 271
+Average duration: 685.1660516605166
+
+==================== run1_monetary.csv ====================
+number of subjects before preprocessing: 1189
+number of subjects after removing attention check fails: 951
+number of subjects after removing submissions with missing data: 836
+number of subjects after removing submissions that exceed duration thresholds: 818
+number of subjects after removing submissions that did not choose within the circle: 818
+Average duration: 657.3435207823961
+
+==================== run1_shapes.csv ====================
+number of subjects before preprocessing: 821
+number of subjects after removing attention check fails: 694
+number of subjects after removing submissions with missing data: 452
+number of subjects after removing submissions that exceed duration thresholds: 434
+number of subjects after removing submissions that did not choose within the circle: 434
+Average duration: 703.1543778801844
+
+==================== run2_monetary.csv ====================
+number of subjects before preprocessing: 1104
+number of subjects after removing attention check fails: 987
+number of subjects after removing submissions with missing data: 927
+number of subjects after removing submissions that exceed duration thresholds: 923
+number of subjects after removing submissions that did not choose within the circle: 922
+Average duration: 254.2697724810401
+
+==================== run2_shapes.csv ====================
+number of subjects before preprocessing: 353
+number of subjects after removing attention check fails: 317
+number of subjects after removing submissions with missing data: 294
+number of subjects after removing submissions that exceed duration thresholds: 283
+number of subjects after removing submissions that did not choose within the circle: 283
+Average duration: 226.03180212014135
+

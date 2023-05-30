@@ -1,0 +1,74 @@
+testing whether people move away from the virtual player's choice when searching for same shape: 0.0081
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.016
+Model:                            OLS   Adj. R-squared:                  0.014
+Method:                 Least Squares   F-statistic:                     6.887
+Date:                Tue, 30 May 2023   Prob (F-statistic):           0.000134
+Time:                        17:51:34   Log-Likelihood:                -7419.4
+No. Observations:                1252   AIC:                         1.485e+04
+Df Residuals:                    1248   BIC:                         1.487e+04
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const           209.9074      4.359     48.157      0.000     201.356     218.459
+pc_result_0.0    16.9235      7.007      2.415      0.016       3.177      30.670
+pc_result_1.0    16.2902      6.976      2.335      0.020       2.605      29.976
+pc_result_5.0    31.5041      7.071      4.455      0.000      17.632      45.376
+==============================================================================
+Omnibus:                       54.751   Durbin-Watson:                   1.952
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               60.381
+Skew:                          -0.527   Prob(JB):                     7.73e-14
+Kurtosis:                       2.787   Cond. No.                         4.19
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+1-0 coef permutation: 0.9964
+5-1 coef permutation: 0.1252
+5-0 coef permutation: 0.1487
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.037
+Model:                            OLS   Adj. R-squared:                  0.019
+Method:                 Least Squares   F-statistic:                     2.001
+Date:                Tue, 30 May 2023   Prob (F-statistic):             0.0155
+Time:                        17:51:54   Log-Likelihood:                -4377.6
+No. Observations:                 739   AIC:                             8785.
+Df Residuals:                     724   BIC:                             8854.
+Df Model:                          14                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================================================
+                                                            coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------
+const                                                   314.6224     59.791      5.262      0.000     197.237     432.007
+age                                                       0.4204      0.473      0.889      0.374      -0.508       1.349
+bigl                                                      0.2035      0.488      0.417      0.677      -0.755       1.162
+grcs                                                     -0.7084      0.904     -0.783      0.434      -2.484       1.067
+rei                                                      -3.0804      1.623     -1.898      0.058      -6.267       0.106
+pc_result_0                                              21.2080      9.331      2.273      0.023       2.889      39.527
+pc_result_1                                              19.3108      9.277      2.082      0.038       1.098      37.524
+pc_result_5                                              31.1606      9.370      3.326      0.001      12.766      49.556
+gender_Male                                             -17.7502      6.852     -2.591      0.010     -31.202      -4.298
+gender_Other or prefer not to say                       -28.4567     38.293     -0.743      0.458    -103.635      46.722
+education_Associate degree                              -16.3226     36.635     -0.446      0.656     -88.246      55.600
+education_Bachelor's degree                             -28.2261     33.020     -0.855      0.393     -93.052      36.600
+education_Graduate or professional degree               -31.2698     33.606     -0.930      0.352     -97.246      34.707
+education_High school graduate (includes equivalency)   -19.8581     33.578     -0.591      0.554     -85.780      46.063
+education_Some college, no degree                       -14.4102     33.290     -0.433      0.665     -79.767      50.946
+==============================================================================
+Omnibus:                       27.192   Durbin-Watson:                   2.066
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               27.717
+Skew:                          -0.444   Prob(JB):                     9.58e-07
+Kurtosis:                       2.667   Cond. No.                     1.24e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.24e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
