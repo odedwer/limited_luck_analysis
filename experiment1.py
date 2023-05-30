@@ -44,19 +44,25 @@ real_params = est2.params
 
 n_perm = 10000
 max_dist = np.zeros((n_perm,), dtype=float)
+min_dist = np.zeros((n_perm,), dtype=float)
 np.random.seed(97)
 for i in tqdm(range(n_perm)):
     perm_y = np.random.permutation(y)
     params = sm.OLS(perm_y, X2).fit().params[1:].to_numpy()
     max_dist[i] = np.abs((params - params[:, None])).max()
+    min_dist[i] = np.abs((params - params[:, None])).min()
 
 five_minus_0 = np.abs(real_params["pc_result_5.0"] - real_params["pc_result_0.0"])
 five_minus_1 = np.abs(real_params["pc_result_5.0"] - real_params["pc_result_1.0"])
 one_minus_0 = np.abs(real_params["pc_result_1.0"] - real_params["pc_result_0.0"])
 
-print(f"1-0 coef permutation: {(one_minus_0 < max_dist).mean()}")
-print(f"5-1 coef permutation: {(five_minus_1 < max_dist).mean()}")
-print(f"5-0 coef permutation: {(five_minus_0 < max_dist).mean()}")
+print(
+    f"1-0 coef permutation - larger than max pvalue: {(one_minus_0 < max_dist).mean()}, smaller than min pvalue: {(one_minus_0 > min_dist).mean()}")
+print(
+    f"5-1 coef permutation - larger than max pvalue: {(five_minus_1 < max_dist).mean()}, smaller than min pvalue: {(five_minus_1 > min_dist).mean()}")
+print(
+    f"5-0 coef permutation - larger than max pvalue: {(five_minus_0 < max_dist).mean()}, smaller than min pvalue: {(five_minus_0 > min_dist).mean()}")
+
 
 # %% Heatmaps - all collapsed
 
