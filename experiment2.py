@@ -52,9 +52,9 @@ for i in tqdm(range(n_perm)):
     max_dist[i] = np.abs((params - params[:, None])).max()
     min_dist[i] = np.abs((params - params[:, None])).min()
 
-five_minus_0 = np.abs(real_params["pc_result_5.0"] - real_params["pc_result_0.0"])
-five_minus_1 = np.abs(real_params["pc_result_5.0"] - real_params["pc_result_1.0"])
-one_minus_0 = np.abs(real_params["pc_result_1.0"] - real_params["pc_result_0.0"])
+five_minus_0 = np.abs(real_params["pc_result_5"] - real_params["pc_result_0"])
+five_minus_1 = np.abs(real_params["pc_result_5"] - real_params["pc_result_1"])
+one_minus_0 = np.abs(real_params["pc_result_1"] - real_params["pc_result_0"])
 
 print(
     f"1-0 coef permutation - larger than max pvalue: {(one_minus_0 < max_dist).mean()}, smaller than min pvalue: {(one_minus_0 > min_dist).mean()}")
